@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/homelyseven250/voicemod#readme",
   "dependencies": {
-    "discord.js": "^12.2.0"
+    "@discordjs/opus": "github:discordjs/opus",
+    "discord.js": "^12.2.0",
+    "ffmpeg": "0.0.4",
+    "sodium": "^3.0.2"
   }
 }
