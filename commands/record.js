@@ -2,8 +2,8 @@ const fs = require('fs');
 async function record(message, args){
     if (message.member.voice.channel) {
         const connection = await message.member.voice.channel.join();
-        const audio = connection.receiver.createStream(message.member.id, { mode: 'pcm' });
-
+        const audio = connection.receiver.createStream(message.member.id, { mode: 'pcm', end: "manual"});
+        console.log(message.member.id)
         audio.pipe(fs.createWriteStream('user_audio'));
 
     }
